@@ -1,0 +1,16 @@
+h5 Search
+.row
+    .col-md-8
+        .form-group.form-group-default
+            label Summoner            
+            input#name.form-control(type='text', required='')                
+    .col-md-4                         
+        button.btn.btn-primary(onClick='summoners.searchByName($("#name").val())') Search
+
+h5 Favorite Summoners
+ul
+    li
+        a(href="#" onClick='summoners.searchByName("IronFrogg")') Irakli
+    li
+        a(href="#" onClick='summoners.searchByName("ThatSpysASpy")') Davis
+

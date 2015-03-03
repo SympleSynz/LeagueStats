@@ -1,0 +1,17 @@
+h3 Results
+table.table.table-striped
+    thead
+        tr 
+            th Name
+            th Level
+            th Summoner ID
+    tbody
+        for item in data
+            tr
+                td= item.name
+                td  
+                    if (item.name == 'IronFrogg')
+                        = 31
+                    else
+                        = item.summonerLevel
+                td= item.id
