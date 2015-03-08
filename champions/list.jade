@@ -1,0 +1,11 @@
+h3 Champion List
+table.table.table-striped
+    thead
+        tr 
+            th Name
+            th Champion ID
+    tbody
+        each item in data
+            tr
+                td= item.name
+                td= item.id

@@ -1,0 +1,15 @@
+h3 Details
+table.table.table-striped
+    thead
+        tr 
+            th Last Game Played
+            th Total Champ Kills
+            th Total Assists
+            th Wins
+    tbody
+        each item in data.playerStatSummaries
+            tr
+                td= item.playerStatSummaryType
+                td= item.aggregatedStats.totalChampionKills
+                td= item.aggregatedStats.totalAssists
+                td= item.wins
