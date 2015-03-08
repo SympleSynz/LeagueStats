@@ -30,6 +30,18 @@ var summoners = {
 
         })
     },
+    findStats: function(id) {
+        $.get("https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/"+id+"/summary?season=SEASON2015&api_key="+apikey, function(data) {
+            $.get("/LeagueStats/summoners/details2.jade", function(template) {
+                var html = jade.render(template, {
+                    data: data
+                })
+                $("#details").html(html)
+                $("#list").html("")
+            })
+
+        })
+    },
 
     load: function() {
 

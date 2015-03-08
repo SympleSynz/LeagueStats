@@ -12,6 +12,7 @@ var champions = {
                 })
                 $("#list").html("")
                 $("#details").html(html)
+                $("#details2").html("")
             })
 
         })
@@ -25,6 +26,7 @@ var champions = {
                 })
                 $("#details").html("")
                 $("#list").html(html)
+                $("#details2").html("")
             })
 
         })

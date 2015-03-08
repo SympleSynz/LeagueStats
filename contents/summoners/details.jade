@@ -4,14 +4,10 @@ table.table.table-striped
         tr 
             th Name
             th Level
-            th Summoner ID
     tbody
         for item in data
             tr
-                td= item.name
-                td  
-                    if (item.name == 'IronFrogg')
-                        = 31
-                    else
-                        = item.summonerLevel
-                td= item.id
+                td
+                    a(href="#" onClick='summoners.findStats("' + item.id + '")')
+                        = item.name
+                td= item.summonerLevel
